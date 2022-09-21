@@ -1,0 +1,129 @@
+:root {
+    --primary-orange: hsl(31, 77%, 52%);
+    --primary-cyan: hsl(184, 100%, 22%);
+    --primary-dark-cyan: hsl(179, 100%, 13%);
+    --paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+p {
+    color: var(--paragraph-color);
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: "Big Shoulders Display", sans-serif;
+    color: var(--light-gray);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    padding: 8rem 0;
+}
+
+main {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card {
+    padding: 5rem;
+}
+
+.card h1 {
+    margin: 3rem 0;
+}
+
+.card p {
+    max-width: 21rem;
+    line-height: 2.5rem;
+    margin-bottom: 6.5rem;
+}
+
+.card button {
+    background-color: var(--light-gray);
+    padding: 1.5rem 3.1rem;
+    border: 0.3rem solid var(--light-gray);
+    border-radius: 3.1rem;
+    transition: 0.3s;
+}
+
+.card:nth-child(1) {
+    background-color: var(--primary-orange);
+}
+
+.card:nth-child(1) button {
+    color: var(--primary-orange);
+}
+
+.card:nth-child(2) {
+    background-color: var(--primary-cyan);
+}
+
+.card:nth-child(2) button {
+    color: var(--primary-cyan);
+}
+
+.card:nth-child(3) {
+    background-color: var(--primary-dark-cyan);
+}
+
+.card:nth-child(3) button {
+    color: var(--primary-dark-cyan);
+}
+
+.card button:hover {
+    background-color: transparent;
+    color: var(--light-gray);
+}
+
+@media (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .card h1 {
+        margin: 2.5rem 0;
+    }
+
+    .card p {
+        max-width: 25rem;
+    }
+}
+
+@media (max-width: 376px) {
+    .card p {
+        margin-bottom: 3rem;
+        max-width: 23rem;
+    }
+}
